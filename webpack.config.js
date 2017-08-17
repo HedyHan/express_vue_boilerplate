@@ -2,7 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-  entry: ['./client/main.js'],
+  entry: './client/main.js',
   output: {
     path: path.resolve(__dirname, './server/public/js'),
     publicPath: '/js/',
@@ -33,18 +33,10 @@ module.exports = {
       }
     ]
   },
-  resolve: {
-    alias: {
-      'vue$': 'vue/dist/vue.esm.js'
-    }
-  },
-  devServer: {
-    historyApiFallback: true,
-    noInfo: true
-  },
-  performance: {
-    hints: false
-  },
+  plugins: [
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.NoEmitOnErrorsPlugin()
+  ],
   devtool: '#eval-source-map'
 };
 
