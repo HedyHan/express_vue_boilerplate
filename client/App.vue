@@ -4,6 +4,7 @@
     <router-link :to="{ name: 'home' }">Home</router-link>
     <router-link :to="{ name: 'hello' }">Hello</router-link>
     <router-link :to="{ name: 'todo' }">Todo</router-link>
+    <router-link :to="{ name: 'axios' }">Axios</router-link>
     <router-view></router-view>
   </div>
 </template>
@@ -26,6 +27,10 @@
 
 h1, h2 {
   font-weight: normal;
+}
+
+a{
+  margin-bottom: 15px;
 }
 
 </style>

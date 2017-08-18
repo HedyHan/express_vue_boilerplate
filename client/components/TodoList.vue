@@ -22,7 +22,7 @@
             return {
                 todos:[
                     {
-                        item: 'This is a todo list.'
+                        item: 'This is a todo list~'
                     }
                 ]
             }
